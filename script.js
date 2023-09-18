@@ -4,7 +4,7 @@ var timer = 30;
 
 const makeBubble = () => {
     let clutter = "";
-    for (let i = 1; i < 110; i++) {
+    for (let i = 1; i < 78; i++) {
         clutter += ` <div class="bubble">${Math.floor(Math.random() * 10)}</div>`;
     }
 
@@ -44,7 +44,10 @@ const Play = () => {
             makeBubble();
         }
         else {
-            dets.target.textContent.style.backgroundColor = "red";
+            if (dets.target.classList.contains("bubble")) 
+            {
+                dets.target.style.backgroundColor ="red";
+                }
         }
     })
 }
