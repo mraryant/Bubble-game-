@@ -2,6 +2,17 @@ var Hitvalue = 0;
 var score = 0;
 var timer = 30;
 
+document.querySelector("#Shuffle").addEventListener("click", () => {
+    makeBubble();
+})
+document.querySelector("#Replay").addEventListener("click", () => {
+    Play();
+    makeBubble();
+    rendomHitVal();
+    timer = 30;
+    score = 0;
+    document.querySelector("#score").textContent = score;
+})
 const makeBubble = () => {
     let clutter = "";
     for (let i = 1; i < 78; i++) {
@@ -51,6 +62,7 @@ const Play = () => {
         }
     })
 }
+
 
 
 Play();

@@ -13,10 +13,38 @@ html,body{
     height: 100vh;
     width: 100vw;
     background-color: rgb(149, 180, 148);
+    /* position: relative; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+#buttons{
+    /* position: absolute; */
+    height: 6%; 
+
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+    /* padding: 0px 100px; */
+}
+.btn{
+    height:40px;
+    font-size: 20px;
+    width: 150px;
+    border:2px solid white;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: rgb(53, 81, 45);
+}
+ .btn:hover{
+    background-color: rgb(33, 38, 32);
+    scale: 1.1;
+ }
+
 #panel{
     height: 90%;
     width: 80%;
@@ -30,7 +58,7 @@ html,body{
     color: white ;
     background-color: rgb(51, 89, 76);
     width: 100%;
-    height: 7vmax;
+    height: 12vh;
     display: flex;
     padding: 0px 3vmax;
      
@@ -43,16 +71,17 @@ html,body{
     /* width: 10%; */
     display: flex;
     align-items: center;
-    gap: 20px  ;
-    font-size: 3vmax;
+    gap: 2vw  ;
+    font-size: 5vh;
 }
 
 .box{
-    padding: 10px;
+    padding: 0px 10px ;
     background-color: white;
     border-radius: 5px;
     color: black;
     font-weight: 900;
+    font-size: 7vh;
 }
 
 #pbtm{
@@ -85,3 +114,40 @@ html,body{
     scale: 1.2;
     background-color:rgb(94, 153, 100) ;
 }
+
+@media (max-width: 310px) {
+    .btn{
+        font-size: 7vw;
+    }
+}
+@media (max-width: 600px) {
+    #ptop{
+        height: 14vh;
+    }
+    .elem {
+            /* width: 10%; */
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 2vw;
+            font-size: 5.5vw;
+            width: 10vh;
+        }
+    .box {
+             
+            font-size: 5vh;
+        }
+    .bubble {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 30px;
+            height: 3.2rem;
+            width: 3.2rem;
+            background-color: rgb(51, 89, 76);
+            border-radius: 50%;
+        }
+}  
+
+ 
